@@ -1,0 +1,24 @@
+torch
+torchvision
+mediapipe == 0.10.9
+opencv-python
+numpy
+tqdm
+scikit-learn
+matplotlib
+seaborn
+pyttsx3
+playsound==1.2.2
+gTTS
+edge-tts 
+pygame
+asyncio
+flask
+flask-socketio
+eventlet
+vosk 
+sounddevice
+silero-vad
+onnxruntime
+onnx
+onnxscript

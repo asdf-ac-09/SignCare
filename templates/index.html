@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignCare</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+
+    <div id="dashboard-screen" class="screen active">
+        <header class="topbar">
+            <div class="topbar-left">
+                <img src="/static/logo.jpg" class="logo big-logo">
+                <h2>SignCare</h2>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <div class="welcome-card">
+                <h1>Welcome to SignCare</h1>
+                <p>
+                    Professional medical communication system for real-time
+                    sign language detection and speech-to-text transcription.
+                </p>
+                <ul>
+                    <li>✔ Real-Time Sign Language Detection</li>
+                    <li>✔ Speech-to-Text Transcription</li>
+                    <li>✔ Communication Logs</li>
+                </ul>
+                <div class="init-loader">
+                    <p>System is initializing, please wait...</p>
+                </div>
+            </div>
+
+            <div class="status-card">
+                <h3>System Status</h3>
+                <div class="status-item" id="stat-camera">
+                    📷 Camera <span class="status-pending">Initializing...</span>
+                </div>
+                <div class="status-item" id="stat-mic">
+                    🎤 Microphone <span class="status-pending">Initializing...</span>
+                </div>
+                <div class="status-item" id="stat-model">
+                    ⚡ Model <span class="status-pending">Initializing...</span>
+                </div>
+                <div class="status-item" id="stat-speech">
+                    🧠 Speech <span class="status-pending">Initializing...</span>
+                </div>
+
+                <div class="quick-tips">
+                    <h4>Quick Tips</h4>
+                    <ul>
+                        <li>Ensure good lighting for sign language detection</li>
+                        <li>Position hands clearly in camera frame</li>
+                        <li>Speak clearly for accurate transcription</li>
+                        <li>Keep session log for medical records</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="session-screen" class="screen">
+        <header class="topbar">
+            <div class="topbar-left">
+                <img src="/static/logo.jpg" class="logo">
+                <h2>SignCare Communication Session</h2>
+            </div>
+            <span id="connection-status">● Ready</span>
+        </header>
+
+        <div class="session">
+            <div class="camera-panel">
+                <img id="webcam" src="" />
+            </div>
+
+            <div class="chat-panel">
+                <h3>Communication Log</h3>
+                <div id="log-messages" class="log-stream">
+                    <div class="empty-msg">No messages yet</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
